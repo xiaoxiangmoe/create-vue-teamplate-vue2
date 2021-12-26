@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig/tsconfig.web.json",
+  "compilerOptions": {
+    "types": [],
+    "skipLibCheck": false,
+    // FIXME: isolatedModules should be true, but ts don't support it when skipLibCheck is false.
+    "isolatedModules": false,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["src/**/*.spec.ts"]
+}

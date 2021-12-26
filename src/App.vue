@@ -5,19 +5,30 @@ import HelloWorld from '@/components/HelloWorld.vue'
 <template>
   <div id="app">
     <header>
-      <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+      <img
+        alt="Vue logo"
+        class="logo"
+        src="@/assets/logo.svg"
+        width="125"
+        height="125"
+      />
 
       <div class="wrapper">
         <HelloWorld msg="You did it!" />
 
         <nav>
-          <router-link to="/">Home</router-link>
-          <router-link to="/about">About</router-link>
+          <RouterLink to="/">Home</RouterLink>
+          <RouterLink
+            to="/about"
+            v-slot="{ href, route, navigate, isActive, isExactActive }"
+          >
+            <a @click="navigate($event)">About</a>
+          </RouterLink>
         </nav>
       </div>
     </header>
 
-    <router-view />
+    <RouterView />
   </div>
 </template>
 

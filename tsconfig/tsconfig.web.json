@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "module": "ESNext",
+    "jsx": "preserve",
+    "esModuleInterop": true
+  },
+  "vueCompilerOptions": {
+    "experimentalCompatMode": 2
+  }
+}
